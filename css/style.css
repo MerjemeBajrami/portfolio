@@ -1,0 +1,554 @@
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
+body {
+    font-family: system-ui, "Segoe UI","Helvetica Neue", Arial, 
+                 "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0;
+    background-color:  #fdfafa;
+    color: #333;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: right;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding: 13px;
+    width: 40%;
+   
+    gap: 37px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #777;
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+    color: #fb6c48;
+}
+#profile_image{
+    width: 500px;
+
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    height: 100vh;
+}
+.container{
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 25px;
+    color: rgb(101, 101, 101);
+    margin: 1px;
+}
+
+.container h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color:rgb(81, 80, 80);
+    margin: 1px;
+}
+
+.container p {
+    font-size: 20px;
+    color: #555;
+    margin: 1px;
+   
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+a svg {
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    fill: #ff7a57; /* Default color */
+    transition: fill 0.3s ease-in-out;
+}
+
+a:hover svg {
+    fill: white; /* Change to white on hover */
+}
+
+
+
+
+.social-links a {
+    text-decoration: none;
+  
+    font-size: 18px;
+    color: #ff7a57;
+    border: 2px solid #ff7a57;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background: #fb6c48;
+    color: white;
+}
+
+/* About Section */
+.about,
+.skills,
+.portfolio,
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2,
+.skills h2,
+.portfolio h2,
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff7a57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #fb6c48;
+}
+
+/* Skills Section */
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Portfolio Section */
+.portfolio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio ul li {
+    margin: 10px 0;
+}
+
+.portfolio ul li a {
+    text-decoration: none;
+    color: #ff7a57;
+    font-weight: 600;
+}
+
+.portfolio ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#profile_image {
+    animation: float 3s ease-in-out infinite;
+}
+#right{
+    text-align:right ;
+}
+#left, #right{
+    color: #666;
+    font-size: 30px;
+}
+.about{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.about_me{
+    width: 70%;
+    text-align: left;
+}
+.about_me p{
+    width: 90%;
+
+}
+.about_me h2{
+    color: #555;
+}
+
+.about_me {
+    font-family: system-ui, "Segoe UI","Helvetica Neue", Arial, 
+                 "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol", "Noto Color Emoji";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+    word-break: 5px;
+    color: rgb(63, 75, 87);
+}
+hr {
+    color:rgb(190, 189, 189); /* Works in some browsers */
+    background-color: rgb(190, 189, 189); /* Works when width is set */
+    height: 1px; /* Adjust thickness */
+    border: none; /* Remove default border */
+}
+.skills h2{
+    margin-bottom: 30px;
+    font-size: 40px;
+
+}
+.grid-container {
+    display: grid;
+    width: 70%;
+    height: 400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    gap: 10px; /* Spacing between items */
+
+
+
+}
+
+
+/*.grid-container svg {
+    width: 80px;  
+    height:80px; 
+}*/
+.last-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing */
+    grid-column: span 6; /* Ensure it takes full width of the grid */
+  }
+
+  
+.card {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px; /* Enables 3D effect */
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+    #f8ede8, 
+    #f2e3ca);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+  
+.card:hover .card-inner {
+    transform: rotateY(15deg) rotateX(15deg);
+  }
+.skills h2{
+    color:rgb(81, 80, 80);
+}
+  
+.grid-container svg {
+    max-width: 80%;
+    max-height: 80%;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+  }
+  
+
+
+.container_{
+    width: 70%;
+  
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container_ .card_{
+    position: relative;
+    cursor: pointer;
+    height: 300px;
+    
+
+}
+
+.container_ .card_ .face{
+    width: 400px;
+    height: 150px;
+
+    transition: 0.5s;
+}
+
+.container_ .card_ .face.face1{
+    position: relative;
+    background:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.face1 img{
+    width: 100%;
+}
+
+.container_ .card_:hover .face.face1{
+    background: white;
+    transform: translateY(0);
+}
+
+.container_ .card_ .face.face1 .content{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.container_ .card_:hover .face.face1 .content{
+    opacity: 1;
+}
+
+
+
+.container_ .card_ .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container_ .card_ .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-80px);
+}
+
+.container_ .card_:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container_ .card_ .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container_ .card_ .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container_ .card_ .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+.portfolio_{
+    padding: 20px;
+}
+.portfolio_ h2{
+    margin-top: 20px;
+    text-align: center;
+    color:rgb(81, 80, 80);
+    font-size: 30px;
+
+}
+
+/* Initially hide the image */
+.bottom-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;   /* Adjust the width to fit the screen */
+    z-index: -1;
+    display: none; /* Hidden initially */
+}
+
+
+.contact a{
+    text-decoration: none;
+    color: #ff7a57;
+}
+
+
+
+
+
+  
+ .carousel {
+  width: 78%;
+  margin: 0 auto;
+  padding: 80px 0 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.categories__title {
+ 
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel__container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+.carousel__container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-item {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 180px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.carousel-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.carousel-item__details {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 16px;
+}
+
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
+
+.carousel-item__details span {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.carousel-item__details--title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.carousel-item__details--subtitle {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
